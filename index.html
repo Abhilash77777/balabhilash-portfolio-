@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Balabhilash Ujjaini – Cybersecurity Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1F0;--surface:#FBFCFC;--ink:#10201E;--muted:#52615E;--line:#CBD5D2;--accent:#0F766E;--accent-ink:#fff;--warn:#C2410C;
+--head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A19;--surface:#162624;--ink:#E7EFED;--muted:#9DB0AC;--line:#27403C;--accent:#4FD1C0;--accent-ink:#06201D;--warn:#FB923C;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1A19;--surface:#162624;--ink:#E7EFED;--muted:#9DB0AC;--line:#27403C;--accent:#4FD1C0;--accent-ink:#06201D;--warn:#FB923C;color-scheme:dark}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:18px;height:58px}
+nav .brand{font:800 18px var(--head);text-decoration:none;margin-right:auto}
+nav a.l{font-size:15px;text-decoration:none;color:var(--muted)}
+nav a.l:hover{color:var(--ink)}
+.tg{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;font:500 14px var(--body);cursor:pointer}
+.sw{width:30px;height:16px;border-radius:9px;background:var(--line);position:relative;transition:background .2s}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--surface);transition:transform .2s}
+.tg[aria-pressed="true"] .sw{background:var(--accent)}
+.tg[aria-pressed="true"] .sw::after{transform:translateX(14px)}
+.hero{padding:76px 0 64px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+h1{font:800 clamp(40px,7vw,76px)/1 var(--head);margin:0 0 20px;letter-spacing:-.02em}
+.role{font:500 20px var(--head);color:var(--accent);margin:0 0 18px}
+.lede{color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.scan{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;font-size:15px}
+.scan h3{font:700 15px var(--head);margin:0 0 12px;color:var(--muted)}
+.url{font:500 14px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:10px 12px;border-radius:6px;border:1px solid var(--line);margin-bottom:10px;word-break:break-all}
+.url b{display:block;font:600 12px var(--body);margin-top:4px}
+.url.bad{border-color:var(--warn)}.url.bad b{color:var(--warn)}
+.url.ok b{color:var(--accent)}
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(28px,4vw,38px)/1.1 var(--head);margin:0 0 28px;letter-spacing:-.01em}
+.proj{display:grid;grid-template-columns:200px 1fr;gap:12px 32px;padding:26px 0;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.proj h3{font:700 22px var(--head);margin:0}
+.proj .d{color:var(--muted);font-size:14px;margin-top:4px}
+.proj ul{margin:0;padding-left:18px}
+.proj li{margin-bottom:6px}
+.proj a{color:var(--accent);font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.skills h3{font:700 17px var(--head);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);background:var(--surface);padding:4px 12px;border-radius:6px;font-size:14.5px}
+.tl{display:grid;grid-template-columns:130px 1fr;gap:10px 28px;margin-bottom:26px}
+.tl .when{color:var(--muted);font-size:15px}
+.tl h3{font:700 19px var(--head);margin:0 0 4px}
+.tl p{margin:0;color:var(--muted)}
+.contact a.big{font:800 clamp(22px,4vw,36px) var(--head);word-break:break-all}
+footer{padding:30px 0 120px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+/* assistant */
+#ai{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:360px;max-width:calc(100vw - 36px);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.18);z-index:30;display:flex;flex-direction:column;max-height:min(520px,70vh);transform-origin:bottom right}
+#ai[hidden]{display:none}
+#ai.in{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+.ah{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);font:700 15px var(--head)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.ah small{font:400 12px var(--body);color:var(--muted);display:block}
+.ah button{margin-left:auto;border:0;background:none;color:var(--muted);font-size:20px;cursor:pointer;line-height:1}
+#log{padding:14px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5}
+.m{padding:9px 12px;border-radius:10px;max-width:92%}
+.m.a{background:var(--bg);align-self:flex-start}
+.m.u{background:var(--accent);color:var(--accent-ink);align-self:flex-end}
+.cur::after{content:"▍";color:var(--accent);margin-left:1px}
+#q{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 14px;border-top:1px solid var(--line)}
+#q button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 11px;font:500 13px var(--body);cursor:pointer}
+#q button:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:44px}.proj,.tl{grid-template-columns:1fr}.skills{grid-template-columns:1fr}nav a.l{display:none}
+#ai{left:12px;right:12px;width:auto;max-width:none;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-height:62vh}}
+@media (prefers-reduced-motion:reduce){#ai.in{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#top">Abhilash U.</a>
+<a class="l" href="#projects">Projects</a><a class="l" href="#skills">Skills</a><a class="l" href="#path">Experience</a><a class="l" href="#contact">Contact</a>
+<button class="tg" id="tg" aria-pressed="true" aria-label="Toggle AI assistant"><span class="sw"></span>AI guide</button>
+</nav></div></header>
+
+<main class="wrap" id="top">
+<div class="hero">
+<div>
+<h1>Balabhilash Ujjaini</h1>
+<p class="role">Cybersecurity student and web security tester</p>
+<p class="lede">I find the weak spots in web applications before attackers do, and I build browser tools and firewall rules that stop phishing and injection attacks. Currently interning in cloud and network security.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="scan" aria-label="Example of SecureLink-style link checks">
+<h3>How my link checkers read a URL</h3>
+<div class="url bad">http://secure-login.paypa1-verify.example/update<b>Blocked: look-alike domain, urgent keywords</b></div>
+<div class="url bad">http://192.0.2.44/app-release.apk<b>Blocked: raw IP, APK download</b></div>
+<div class="url ok">https://www.coursera.org/learn<b>Allowed: clean domain pattern</b></div>
+</div>
+</div>
+
+<section id="projects"><h2>Projects</h2>
+<div class="proj"><div><h3>SecureLink AI</h3><div class="d">Chrome extension<br>Dec 2025</div></div><div><ul>
+<li>Watches links shared in WhatsApp Web chats and flags phishing URLs and malicious downloads.</li>
+<li>Heuristic risk scoring on suspicious keywords, domain patterns and file types such as APK and executables.</li>
+<li>Blocks high-risk links in real time and shows a clear visual warning.</li></ul><a href="https://github.com/Abhilash77777">View on GitHub</a></div></div>
+<div class="proj"><div><h3>URL Sniffer</h3><div class="d">Phishing detection extension<br>Feb 2026</div></div><div><ul>
+<li>Analyzes visited URLs for suspicious subdomains and deceptive domains.</li>
+<li>Spots IP-based links and unusual hostname formats common in phishing.</li>
+<li>Raises browser alerts using Chrome extension APIs and tab monitoring.</li></ul><a href="https://github.com/Abhilash77777">View on GitHub</a></div></div>
+<div class="proj"><div><h3>NGINX Web Application Firewall</h3><div class="d">Reverse proxy<br>Mar 2026</div></div><div><ul>
+<li>Nginx reverse proxy that inspects HTTP requests before they reach a vulnerable PHP application.</li>
+<li>Rule-based filtering blocks SQL injection and XSS attempts in query parameters.</li>
+<li>Detects and blocks OWASP Top 10 attacks in live traffic.</li></ul><a href="https://github.com/Abhilash77777">View on GitHub</a></div></div>
+</section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="skills">
+<div><h3>Security</h3><div class="chips"><span>Web application security</span><span>Penetration testing</span><span>OWASP Top 10</span><span>Bug hunting</span><span>Vulnerability assessment</span></div></div>
+<div><h3>Tools</h3><div class="chips"><span>Burp Suite</span><span>Nmap</span><span>Kali Linux</span><span>Wireshark</span><span>NGINX</span><span>Git</span><span>MySQL</span><span>MariaDB</span><span>Chrome Extension APIs</span></div></div>
+<div><h3>Languages</h3><div class="chips"><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>CSS</span></div></div>
+<div><h3>Working style</h3><div class="chips"><span>Problem-solving</span><span>Time management</span><span>Communication</span></div></div>
+</div></section>
+
+<section id="path"><h2>Experience and education</h2>
+<div class="tl"><div class="when">Jun 2026 – now</div><div><h3>Cybersecurity / Cloud &amp; Network Engineer Intern, Vosyn.ai</h3><p>Supporting cloud and network security work: infrastructure security, network configuration tasks and risk reduction.</p></div></div>
+<div class="tl"><div class="when">Jul 2026</div><div><h3>Cybersecurity Foundations, Google (Coursera)</h3><p>Threat detection, risk management, network security, system hardening and incident response.</p></div></div>
+<div class="tl"><div class="when">Jan 2025 – now</div><div><h3>Web application security and bug hunting, self-learning</h3><p>Hands-on practice with Kali Linux and Burp Suite on SQL injection, XSS, IDOR and broken access control, using labs like DVWA.</p></div></div>
+<div class="tl"><div class="when">Aug 2023 – now</div><div><h3>B.Tech in Cybersecurity, Lovely Professional University</h3><p>Phagwara, Punjab.</p></div></div>
+<div class="tl"><div class="when">2021 – 2023</div><div><h3>Intermediate, Narayana Junior College</h3><p>Tirupati, Andhra Pradesh. 85.2%.</p></div></div>
+<div class="tl"><div class="when">2024 – 2026</div><div><h3>Certificates</h3><p>Software Engineering: Implementation and Testing (Coursera), The Bits and Bytes of Computer Networking (Coursera), Windows Command Mastery for Ethical Hackers (Udemy), Prompt Engineering (Infosys), Deloitte Cyber Job Simulation (Forage).</p></div></div>
+</section>
+
+<section id="contact" class="contact"><h2>Let’s talk</h2>
+<p style="color:var(--muted);margin-top:0">Open to internships, security projects and bug-hunting collaboration.</p>
+<p><a class="big" href="mailto:balabhilash0412@gmail.com">balabhilash0412@gmail.com</a></p>
+<div class="btns"><a class="btn" href="https://www.linkedin.com/in/abhilash-ujjaini" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/Abhilash77777" target="_blank" rel="noopener">GitHub</a><a class="btn" href="tel:+916303833425">+91 63038 33425</a></div>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Balabhilash Ujjaini</div></footer>
+
+<aside id="ai" role="dialog" aria-label="AI guide" hidden>
+<div class="ah"><span class="dot"></span><div>Abhilash’s AI guide<small>Ask me about his work</small></div><button id="x" aria-label="Turn AI guide off">×</button></div>
+<div id="log" aria-live="polite"></div>
+<div id="q"></div>
+</aside>
+
+<script>
+(function(){
+var KB={
+who:"Hi, I’m Abhilash’s AI guide. Balabhilash Ujjaini (Abhilash) is a B.Tech Cybersecurity student at Lovely Professional University and a web security tester. He hunts for vulnerabilities in web apps, builds tools that stop phishing and injection attacks, and is currently a Cybersecurity / Cloud & Network Engineer intern at Vosyn.ai.",
+skills:"His security skills cover web application security, penetration testing, OWASP Top 10, bug hunting and vulnerability assessment. He works with Burp Suite, Nmap, Kali Linux, Wireshark and NGINX, and codes in C, Java, JavaScript, SQL, HTML and CSS.",
+projects:"He has built three projects: SecureLink AI, a Chrome extension that blocks phishing links in WhatsApp Web; URL Sniffer, which flags deceptive URLs; and an NGINX-based web application firewall that blocks SQL injection and XSS.",
+exp:"Since June 2026 he has been interning at Vosyn.ai on cloud and network security. He also completed Google’s Cybersecurity Foundations course and has been practicing bug hunting since January 2025.",
+edu:"He is studying B.Tech in Cybersecurity at Lovely Professional University, Phagwara (since Aug 2023). Before that he scored 85.2% in Intermediate at Narayana Junior College, Tirupati.",
+contact:"You can reach him at balabhilash0412@gmail.com or on +91 63038 33425. His LinkedIn and GitHub links are in the Contact section below."
+};
+var Q=[["Who is Abhilash?","who"],["Skills","skills"],["Projects","projects"],["Experience","exp"],["Education","edu"],["Contact","contact"]];
+var ai=document.getElementById('ai'),log=document.getElementById('log'),q=document.getElementById('q'),tg=document.getElementById('tg'),timer=null,on=true;
+Q.forEach(function(p){var b=document.createElement('button');b.textContent=p[0];b.onclick=function(){ask(p[0],p[1])};q.appendChild(b)});
+function add(c,t){var d=document.createElement('div');d.className='m '+c;d.textContent=t||'';log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function type(text){clearInterval(timer);var d=add('a'),i=0;d.classList.add('cur');
+timer=setInterval(function(){i+=2;d.textContent=text.slice(0,i);log.scrollTop=log.scrollHeight;if(i>=text.length){clearInterval(timer);d.textContent=text;d.classList.remove('cur')}},18)}
+function ask(label,key){add('u',label);type(KB[key])}
+function setOn(v){on=v;tg.setAttribute('aria-pressed',v);try{localStorage.setItem('ai-guide',v?'on':'off')}catch(e){}
+if(v){ai.hidden=false;ai.classList.remove('in');void ai.offsetWidth;ai.classList.add('in');log.innerHTML='';type(KB.who)}
+else{clearInterval(timer);ai.hidden=true}}
+tg.onclick=function(){setOn(!on)};
+document.getElementById('x').onclick=function(){setOn(false)};
+var saved=null;try{saved=localStorage.getItem('ai-guide')}catch(e){}
+if(saved==='off'){on=false;tg.setAttribute('aria-pressed',false)}else{setTimeout(function(){setOn(true)},700)}
+})();
+</script>
+</body>
+</html>
